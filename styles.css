@@ -1,1 +1,21 @@
 /*  your css code here. If applicable */
+#container {
+  margin: 20px;
+  position: relative; /* ensures pseudo-elements position relative to container if needed */
+}
+
+#container::before {
+  content: "Special text before";
+  color: #f00;
+  font-size: 20px;
+  display: block; /* so it appears on its own line before the container content */
+  margin-bottom: 5px; /* spacing below the before text */
+}
+
+#container::after {
+  content: "Special text after";
+  color: #f00;
+  font-size: 20px;
+  display: block; /* appears on its own line after the container content */
+  margin-top: 5px; /* spacing above the after text */
+}
